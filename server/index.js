@@ -7,11 +7,7 @@ import App from '../src/App'
 const app = express()
 app.use(express.static('clientBundle'))
 app.get('/', (req, res) => {
-  // const Page = <App title="react ssr"></App>
-
-  //把react 组件，解析成html
   const content = renderToString(App)
-  //字符串模板
   res.send(`
     <html>
       <head>
