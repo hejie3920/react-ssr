@@ -7,7 +7,7 @@ module.exports = {
   externals: [nodeExternals()],
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'serverBundle')
+    path: path.resolve(__dirname, 'build')
   },
   module: {
     rules: [

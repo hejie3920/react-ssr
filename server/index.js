@@ -5,7 +5,7 @@ import express from 'express'
 import App from '../src/App'
 
 const app = express()
-app.use(express.static('clientBundle'))
+app.use(express.static('public'))
 app.get('/', (req, res) => {
   const content = renderToString(App)
   res.send(`
