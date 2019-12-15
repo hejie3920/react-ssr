@@ -1,4 +1,6 @@
 import axios from 'axios'
+import config from '../../config'
+
 //首页的逻辑
 //indexReducer
 
@@ -10,11 +12,12 @@ const changeList = list => ({
 
 export const getIndexList = server => {
   return (dispatch) => {
-    return axios.get('http://localhost:9090/api/course/list')
+    return axios.get(`${config.host}/api/course/list`)
       .then(res => {
         const {
           list
         } = res.data
+        console.log("TCL: list", list)
         dispatch(changeList(list))
       })
   }

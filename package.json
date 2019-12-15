@@ -10,7 +10,7 @@
     "client": "webpack --config webpack.client.js --watch",
     "server": "webpack --config webpack.server.js --watch",
     "start": "nodemon --watch build --exec node \"./build/bundle.js\"",
-    "dev": "concurrently \"npm run client\" \"npm run server\" \"npm run start\""
+    "dev": "concurrently \"npm run client\" \"npm run server\" \"npm run start\" "
   },
   "devDependencies": {
     "@babel/core": "^7.7.5",
@@ -24,6 +24,8 @@
     "axios": "^0.19.0",
     "babel-loader": "^8.0.6",
     "express": "^4.17.1",
+    "express-http-proxy": "^1.6.0",
+    "http-proxy-middleware": "^0.20.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-redux": "^7.1.3",
