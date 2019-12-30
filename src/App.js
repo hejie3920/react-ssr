@@ -4,7 +4,7 @@ import Index from "./container/Index.js"
 import User from "./container/User.js"
 import NotFound from "./container/NotFound.js"
 import About from "./container/About.js"
-import "./App.css"
+// import "./App.css"
 
 // export default (
 //   <div>

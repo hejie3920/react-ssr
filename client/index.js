@@ -20,4 +20,9 @@ const Page = (
   </Provider>
 )
 
-ReactDom.hydrate(Page, document.getElementById("root"))
+// 如果是直接降级渲染的，则直接关闭ssr
+if (window.__context) {
+  ReactDom.hydrate(Page, document.getElementById("root"))
+} else {
+  ReactDom.render(Page, document.getElementById("root"))
+}
